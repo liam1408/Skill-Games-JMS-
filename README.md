@@ -51,7 +51,7 @@ A JavaFX-based multiplayer game server supporting ConnectFour, Battleship, and J
 ### Running the Application
 1. Make sure all JAR dependencies are in your classpath
 2. Compile and run the main GameClient class
-3. Login with demo account: `gamer_alex21` / `password123`
+3. Login with demo account: `gamer_alex21` / `1234`
 
 ## 🎯 Game Rules
 
@@ -107,7 +107,8 @@ GameServerJMS/
 - JSON-java library
 
 ## 📸 Screenshots
-![Login Screen](docs/screenshots/login_screen.png)
+![Login Screen](<img width="977" height="836" alt="login" src="https://github.com/user-attachments/assets/3483e8d8-540e-4192-bc88-8822dac06ca8" />)
+
 ![Game Selection](docs/screenshots/game_selection.png)
 ![ConnectFour Game](docs/screenshots/connect_four.png)
 
