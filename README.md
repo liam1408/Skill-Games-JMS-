@@ -47,6 +47,7 @@ A JavaFX-based multiplayer game server supporting ConnectFour, Battleship, and J
    private static final String DB_USER = "YOUR_USER";
    private static final String DB_PASSWORD = "YOUR_PASSWORD";   
    ```
+or use mysql workbench and run the sql file there
 
 ### ActiveMQ Setup
 1. Download Apache ActiveMQ 6.1 or later from [https://activemq.apache.org/](https://activemq.apache.org/)
