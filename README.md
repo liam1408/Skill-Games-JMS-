@@ -107,7 +107,8 @@ GameServerJMS/
 - JSON-java library
 
 ## 📸 Screenshots
-![Login Screen](<img width="977" height="836" alt="login" src="https://github.com/user-attachments/assets/3483e8d8-540e-4192-bc88-8822dac06ca8" />)
+<img width="977" height="836" alt="login" src="https://github.com/user-attachments/assets/7c52525e-9d24-4af0-8717-7422ae95d16d" />
+
 
 ![Game Selection](docs/screenshots/game_selection.png)
 ![ConnectFour Game](docs/screenshots/connect_four.png)
