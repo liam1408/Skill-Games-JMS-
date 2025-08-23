@@ -107,11 +107,10 @@ GameServerJMS/
 - JSON-java library
 
 ## 📸 Screenshots
-<img width="977" height="836" alt="login" src="https://github.com/user-attachments/assets/7c52525e-9d24-4af0-8717-7422ae95d16d" />
+![Login]<img width="977" height="836" alt="login" src="https://github.com/user-attachments/assets/7c52525e-9d24-4af0-8717-7422ae95d16d" />
+![Game Selection]<img width="980" height="830" alt="gameselection" src="https://github.com/user-attachments/assets/d853b138-b3c8-4c30-8e72-588263ac02e5" />
+![ConnectFour Game]<img width="870" height="1000" alt="connectfour" src="https://github.com/user-attachments/assets/ebb2f14f-0008-4863-a236-5075c2d6eb7a" />
 
-
-![Game Selection](docs/screenshots/game_selection.png)
-![ConnectFour Game](docs/screenshots/connect_four.png)
 
 ## 🎓 Academic Project
 
