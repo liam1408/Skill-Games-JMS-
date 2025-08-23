@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainContainer" alignment="CENTER" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, steelblue, darkslateblue);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameServerJMS.MyAccountController">
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER_LEFT">
+         <padding>
+            <Insets bottom="30.0" />
+         </padding>
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBack" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-text-fill: steelblue;" text="Back" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="titleLabel" style="-fx-effect: dropshadow(gaussian, black, 8, 0, 0, 2);" text="Account Settings" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="28.0" />
+               </font>
+            </Label>
+            <Region HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <VBox fx:id="optionsContainer" alignment="CENTER" maxWidth="400.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 15;">
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+         <children>
+            <Button fx:id="changeUsernameButton" mnemonicParsing="false" onAction="#handleChangeUsername" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: blue; -fx-background-radius: 25; -fx-effect: dropshadow(gaussian, black, 8, 0, 0, 2);" text="Change Username" textFill="WHITE" />
+            <Button fx:id="changePasswordButton" mnemonicParsing="false" onAction="#handleChangePassword" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: purple; -fx-background-radius: 25; -fx-effect: dropshadow(gaussian, black, 8, 0, 0, 2);" text="Change Password" textFill="WHITE" />
+            <Button fx:id="gameHistoryButton" mnemonicParsing="false" onAction="#handleGameHistory" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: orange; -fx-background-radius: 25; -fx-effect: dropshadow(gaussian, black, 8, 0, 0, 2);" text="Match History" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
