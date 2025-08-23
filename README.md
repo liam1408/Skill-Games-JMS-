@@ -28,6 +28,14 @@ A JavaFX-based multiplayer game server supporting ConnectFour, Battleship, and J
 - MySQL Server 8.0+
 - Apache ActiveMQ 6.1+
 
+## Running The Code
+1. Download the zip file /git clone it
+2. in GameServerJMS folder run
+    ```bash
+   mvn clean install
+   mvn javafx:run
+   ```
+
 ### Database Setup
 1. Install and start MySQL
 2. Run the database setup script:
