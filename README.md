@@ -74,7 +74,7 @@ A JavaFX-based multiplayer game server supporting ConnectFour, Battleship, and J
 
 ## 📊 Sample Users
 
-The database comes with 10 demo users (all password: `password123`):
+The database comes with 10 demo users (all password: `1234`):
 - `gamer_alex21` (Rating: 1200)
 - `proconnect4` (Rating: 1150)
 - `battleship_master` (Rating: 1300)
@@ -86,25 +86,6 @@ The database comes with 10 demo users (all password: `password123`):
 - `vortex_player` (Rating: 1280)
 - `elite_gamer` (Rating: 1210)
 
-## 📁 Project Structure
-
-```
-GameServerJMS/
-├── src/main/java/          # Java source code
-├── resources/              # FXML UI files
-├── lib/                    # JAR dependencies
-├── docs/                   # Documentation & screenshots
-├── database_setup.sql      # Database creation script
-├── INSTRUCTIONS.md         # Detailed setup instructions
-└── README.md              # This file
-```
-
-## 🔧 Dependencies
-
-- JavaFX Controls & FXML 21+
-- MySQL Connector/J 8.0+
-- Apache ActiveMQ Client 6.1+
-- JSON-java library
 
 ## 📸 Screenshots
 [Login]
@@ -129,5 +110,3 @@ This project was developed as part of a university course, demonstrating:
 This project is for educational purposes.
 
 ---
-
-**Ready to play? Set up the database, start ActiveMQ, and launch the game server!** 🚀
