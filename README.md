@@ -35,6 +35,7 @@ A JavaFX-based multiplayer game server supporting ConnectFour, Battleship, and J
    mvn clean install
    mvn javafx:run
    ```
+if you are using eclipse or similar make sure the module path: java --module-path "path\to\javafx-21\lib" --add-modules javafx.controls,javafx.fxml
 
 ### Database Setup
 1. Install and start MySQL
