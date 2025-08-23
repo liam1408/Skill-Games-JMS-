@@ -7,21 +7,21 @@
 
   <groupId>com.example</groupId>
   <artifactId>GameServerJMS</artifactId>
-  <version>1.0.0</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <n>GameServerJMS</n>
-  <description>Multiplayer game server that is based on JMS</description>
+  <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>21</maven.compiler.source> 
     <maven.compiler.target>21</maven.compiler.target>
     <javafx.version>21</javafx.version>
+    <javafx.runtime.version>21</javafx.runtime.version>
   </properties>
 
   <dependencies>
-    <!-- JMS and ActiveMQ -->
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>activemq-all</artifactId>
@@ -34,7 +34,6 @@
       <version>2.0.1</version>
     </dependency>
 
-    <!-- Logging Dependencies -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
@@ -59,39 +58,34 @@
       <version>2.17.2</version>
     </dependency>
 
-    <!-- Database Connectivity - Use older stable version -->
+    <!-- FIXED: Changed from mysql-connector-j to mysql-connector-java -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.33</version>
     </dependency>
 
-    <!-- JavaFX Dependencies -->
     <dependency>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-controls</artifactId>
         <version>${javafx.version}</version>
     </dependency>
-    
     <dependency>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-fxml</artifactId>
         <version>${javafx.version}</version>
     </dependency>
-    
     <dependency>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-base</artifactId>
         <version>${javafx.version}</version>
     </dependency>
-    
     <dependency>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-graphics</artifactId>
         <version>${javafx.version}</version>
     </dependency>
     
-    <!-- JSON Processing -->
     <dependency>
         <groupId>org.json</groupId>
         <artifactId>json</artifactId>
@@ -100,18 +94,7 @@
   </dependencies>
 
   <build>
-    <sourceDirectory>src/main/java</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-      </resource>
-      <resource>
-        <directory>resources</directory>
-      </resource>
-    </resources>
-
     <plugins>
-      <!-- Maven Compiler Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -122,7 +105,6 @@
         </configuration>
       </plugin>
 
-      <!-- JavaFX Maven Plugin -->
       <plugin>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
@@ -133,30 +115,26 @@
         </configuration>
       </plugin>
 
-      <!-- Maven Resources Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.3.0</version>
-        <configuration>
-          <encoding>UTF-8</encoding>
-        </configuration>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.4.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>com.example.GameServerJMS.GameClient</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
-
-  <!-- Multiple repositories to increase chances of finding dependencies -->
-  <repositories>
-    <repository>
-      <id>central</id>
-      <n>Maven Central</n>
-      <url>https://repo1.maven.org/maven2</url>
-    </repository>
-    <repository>
-      <id>maven-central</id>
-      <n>Maven Central Repository</n>
-      <url>https://repo.maven.apache.org/maven2</url>
-    </repository>
-  </repositories>
-
 </project>
