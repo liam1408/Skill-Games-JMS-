@@ -28,7 +28,22 @@ A JavaFX-based multiplayer game server supporting ConnectFour, Battleship, and J
 - MySQL Server 8.0+
 - Apache ActiveMQ 6.1+
 
-## Running The Code
+### ActiveMQ Setup
+1. Download Apache ActiveMQ 6.1 or later from [https://activemq.apache.org/](https://activemq.apache.org/)
+2. Start ActiveMQ:
+   ```bash
+   ./activemq start
+   ```
+3. Verify at [http://localhost:8161/admin](http://localhost:8161/admin)
+
+### Running The Server
+```bash
+   mvn clean install
+   mvn compile
+   mvn exec:java "-Dexec.mainClass=gameServerJMS.GameServer
+   ```
+
+### Running The Code
 1. Download the zip file /git clone it
 2. in GameServerJMS folder run
     ```bash
@@ -49,14 +64,6 @@ if you are using eclipse or similar make sure the module path: java --module-pat
    private static final String DB_PASSWORD = "YOUR_PASSWORD";   
    ```
 or use mysql workbench and run the sql file there
-
-### ActiveMQ Setup
-1. Download Apache ActiveMQ 6.1 or later from [https://activemq.apache.org/](https://activemq.apache.org/)
-2. Start ActiveMQ:
-   ```bash
-   ./activemq start
-   ```
-3. Verify at [http://localhost:8161/admin](http://localhost:8161/admin)
 
 ### Running the Application
 1. Make sure all JAR dependencies are in your classpath
