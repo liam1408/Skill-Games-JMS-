@@ -40,10 +40,10 @@ A JavaFX-based multiplayer game server supporting ConnectFour, Battleship, and J
 ```bash
    mvn clean install
    mvn compile
-   mvn exec:java "-Dexec.mainClass=gameServerJMS.GameServer
+   mvn exec:java "-Dexec.mainClass=gameServerJMS.GameServer"
    ```
 
-### Running The Code
+### Running The Client
 1. Download the zip file /git clone it
 2. in GameServerJMS folder run
     ```bash
