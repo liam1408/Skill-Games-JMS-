@@ -6,12 +6,6 @@ package gameServerJMS;
 public class RatingCalculator {
     private static final int K_FACTOR = 32; // Rating change sensitivity factor
     
-    /**
-     * Calculates new ratings for winner and loser using ELO algorithm
-     * @param winnerRating Current rating of the winning player
-     * @param loserRating Current rating of the losing player
-     * @return RatingUpdate object containing new ratings for both players
-     */
     public static RatingUpdate calculateRating(int winnerRating, int loserRating) {
         // Calculate expected win probabilities for both players
         double winnerExpected = 1.0 / (1.0 + Math.pow(10, (loserRating - winnerRating) / 400.0));
@@ -36,4 +30,5 @@ public class RatingCalculator {
             this.loserNewRating = loserNewRating;
         }
     }
+
 }
